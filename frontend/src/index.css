@@ -2,7 +2,7 @@
 @import "tailwindcss";
 
 body {
-  background-color: cornflowerblue;
+  background-color: rgb(31, 74, 219);
   font-family: "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
