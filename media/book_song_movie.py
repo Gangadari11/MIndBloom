@@ -1,6 +1,11 @@
+import os
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 import requests
+from dotenv import load_dotenv
+
+# Load .env variables
+load_dotenv()
 
 app = Flask(__name__)
 CORS(app)
@@ -62,7 +67,7 @@ def get_songs():
 @app.route('/movies', methods=['GET'])
 def get_movies():
     query = request.args.get("q", "calm")
-    api_key = "5a13c37fceff2c51d84ae90834e71a72"  # 🔁 Replace with your real TMDb API key
+    api_key = api_key = os.getenv("MOVIE_API")  # 🔁 Replace with your real TMDb API key
     url = f"https://api.themoviedb.org/3/search/movie?api_key={api_key}&query={query}"
 
     try:
