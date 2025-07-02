@@ -1,5 +1,5 @@
 import { collection, addDoc } from "firebase/firestore"
-import { db } from "../pages/firebase"
+import { db } from "../pages/firebase.js"
 
 const sampleCounselors = [
   {
